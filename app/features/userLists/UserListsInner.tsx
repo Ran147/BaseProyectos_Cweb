@@ -46,12 +46,12 @@ const UserListsInner = ({ viewModel }: UserListsInnerProps) => {
           {users.map((user) => (
             <li
               key={user.id}
-              className="flex items-center justify-between gap-3 border px-3 py-2 rounded"
+              className="flex items-center justify-between gap-3 border border-slate-200 bg-slate-50 px-3 py-2 rounded"
             >
-              <span>{user.name}</span>
+              <span className="text-slate-900 font-medium">{user.name}</span>
               <Button
                 type="button"
-                className="text-red-600 hover:underline bg-transparent border-none px-0"
+                className="text-red-700 hover:text-red-900 bg-transparent border-none px-0"
                 onClick={() => handleDelete(user.id)}
               >
                 Eliminar
@@ -60,7 +60,7 @@ const UserListsInner = ({ viewModel }: UserListsInnerProps) => {
           ))}
         </ul>
       ) : (
-        <p className="text-sm text-gray-500">No hay usuarios.</p>
+        <p className="text-sm text-slate-500">No hay usuarios.</p>
       )}
     </Section>
   )

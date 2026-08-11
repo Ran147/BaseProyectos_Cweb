@@ -35,21 +35,21 @@ export const useFormFieldViewModel = ({
   const textColorClass =
     type === INPUT_TYPES.DATE && !isValidDate(value)
       ? "text-zinc-400"
-      : "text-black";
+      : "text-slate-900";
 
   const baseClassName = `
     ${classNameField}
-    bg-background
-    placeholder-zinc-400
+    bg-slate-50
+    placeholder-slate-400
     rounded-2xl
     w-full
     p-4
     text-sm md:text-base
     border
-    ${error ? "border-red-500 text-red-600" : `border-black ${textColorClass}`}
+    ${error ? "border-red-500 text-red-600" : `border-slate-300 ${textColorClass}`}
     ${
       !readOnly && !disabled
-        ? "transition-all duration-200 hover:shadow-[inset_0_0_0_1px_black] focus:shadow-[inset_0_0_0_1px_black]"
+        ? "transition-all duration-200 hover:shadow-[inset_0_0_0_1px_slate-400] focus:shadow-[inset_0_0_0_1px_slate-400]"
         : "transition-none hover:none focus:none pointer-events-none"
     }
     ${error && !readOnly && !disabled ? "hover:shadow-[inset_0_0_0_1px_red] focus:shadow-[inset_0_0_0_1px_red]" : STRING.Empty}
